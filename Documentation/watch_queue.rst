@@ -42,7 +42,7 @@ no preallocated message buffer is available.  In both of these cases, read()
 will insert a WATCH_META_LOSS_NOTIFICATION message into the output buffer after
 the last message currently in the buffer has been read.
 
-Note that when producing a notification, the kernel does not wait for the
+**Note:** that when producing a notification, the kernel does not wait for the
 consumers to collect it, but rather just continues on.  This means that
 notifications can be generated whilst spinlocks are held and also protects the
 kernel from being held up indefinitely by a userspace malfunction.
